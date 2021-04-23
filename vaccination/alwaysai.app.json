@@ -1,6 +1,5 @@
 {
   "models": {
-    "alwaysai/mobilenet_ssd": 4,
     "alwaysai/yolov3": 5
   },
   "scripts": {
