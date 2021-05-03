@@ -155,7 +155,7 @@ class DetectionManager:
                 dist = p1.box.compute_distance(p2.box)/pixel_scale
                 sum_dist += dist
                 pairlist['{}-{}'.format(pair[0], pair[1])] = dist
-                if dist < 62:
+                if dist < 42: # configure as needed
                     if pair[0] not in badkeys:
                         badlist[pair[0]] = p1
                     
@@ -227,7 +227,7 @@ class DetectionManager:
             # now we have results in format: {object_id: ObjectDetectionPrediction}
             tracked_people_pred = self.centroid_tracker.update(people_pred)
 
-            # get zone update
+            # get area update
             keys = self.check_overlap(tracked_people_pred)
 
             new_predictions = {}
@@ -286,7 +286,7 @@ class DetectionManager:
         """
         in_area = []
         for key, prediction in people_predictions.items():
-            if prediction.box.compute_overlap(self.box) > 0.99:
+            if prediction.box.compute_overlap(self.box) > 0.70: # configure as needed
                 in_area.append(key)
         self.event_log['in_area'] = in_area
         return in_area

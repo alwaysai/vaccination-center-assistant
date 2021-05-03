@@ -24,12 +24,12 @@ class VaccineTracker():
         # detection model
         self.detector = self.load_model("alwaysai/yolov3")
 
-        self.centroid_tracker = edgeiq.CentroidTracker(deregister_frames=4, max_distance=130)
+        self.centroid_tracker = edgeiq.CentroidTracker(deregister_frames=4, max_distance=130) # configure as needed
         
         # vaccination box
         self.box = edgeiq.BoundingBox(1269, 187, 1920, 1080) # configure as needed
         
-        # for overall vaccination logic
+        # for overall vaccination logic, configure as needed
         self.current_ids = []
         self.timestamp = None
         self.total_vaccinations = 0
@@ -41,12 +41,6 @@ class VaccineTracker():
 
     def has_events(self):
         return self._send_events
-
-    def load_json(self, filepath):
-        if os.path.exists(filepath) == False:
-            raise Exception('File at {} does not exist'.format(filepath))
-        with open(filepath) as data:
-            return json.load(data)
 
     def load_model(self, model):
         # start up a first object detection model

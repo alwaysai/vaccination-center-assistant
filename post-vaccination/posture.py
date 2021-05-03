@@ -34,8 +34,6 @@ class CheckPosture:
         self.signals = []
         self.people_count = 0
         self.previous_people_count = 0
-        self.previous_and_raise_count = 0
-
         self._server_url = "http://localhost:5001/" # configure as needed
         self._start_time = time.time()
 

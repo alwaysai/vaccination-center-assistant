@@ -11,19 +11,6 @@ import cv2
 import edgeiq
 from vaccine_tracker import VaccineTracker
 
-"""
-Modifies realtime_object_detector to detect whether a person is exhibiting
-improper posture (as defined in CheckPosture).
-
-Proper posture functions are defined in the 'CheckPosture' class and imported.
-
-This app uses a configuration file (config.json) to configure a
-'scale' factor, which is used to make the posture calculations more or less stringent.
-A larger scale factor (>1) makes the calculation less stringent (allows for less straight
-posture).
-"""
-
-
 def main():
     fps = edgeiq.FPS()
 
@@ -34,7 +21,7 @@ def main():
        
             # Allow application to warm up
             video_stream.start()
-            time.sleep(3.0)
+            time.sleep(2.0)
             fps.start()
             text =[""]
 
