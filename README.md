@@ -4,18 +4,28 @@ event logs to help inform vaccination center logistics.
 
 ## Requirements
 - [alwaysAI account](https://alwaysai.co/auth?register=true)
-- [alwaysAI CLI tools](https://dashboard.alwaysai.co/docs/getting_started/development_computer_setup.html)
+- [alwaysAI CLI tools](https://alwaysai.co/docs/get_started/development_computer_setup.html)
 
 ## Running
-Run each app individually as outlined [here](https://alwaysai.co/blog/building-and-deploying-apps-on-alwaysai)
-Note that for the application in the `waiting` folder, you will have to train and add in your own mask detection model! Access our docs
-for information on [training](https://alwaysai.co/docs/model_training/index.html) and [using models](https://alwaysai.co/docs/alwaysai_workflow/working_with_models.html).
-Also note you can change the server URL to be whatever you choose for your dashboard. Each application is currently set up to stream
-from a web camera (camera 0), but you can choose any file or video stream that fits your use case.
+Once the alwaysAI tools are installed on your development machine (or edge device if developing directly on it) you can install and run the app with the following CLI commands:
+
+To perform initial configuration of the app:
+
+```aai app configure```
+
+To prepare the runtime environment and install app dependencies:
+
+```aai app install```
+
+To start the app:
+
+```aai app start```
+
+To change the computer vision model, the engine and accelerator, and add additional dependencies read this guide.
 
 ## Support
-Docs: https://dashboard.alwaysai.co/docs/getting_started/introduction.html
+[Documentation](https://alwaysai.co/docs/index.html)
 
-Community Discord: https://discord.gg/rjDdRPT
+[Community Discord](https://discord.gg/rjDdRPT)
 
 Email: support@alwaysai.co
