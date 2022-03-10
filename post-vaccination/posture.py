@@ -37,7 +37,7 @@ class CheckPosture:
         self._server_url = "http://localhost:5001/" # configure as needed
         self._start_time = time.time()
 
-        self.pose_estimator = edgeiq.PoseEstimation("alwaysai/human-pose")
+        self.pose_estimator = edgeiq.PoseEstimation("alwaysai/human_pose")
 
         self.pose_estimator.load(
             engine=edgeiq.Engine.DNN)
