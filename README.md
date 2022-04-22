@@ -26,6 +26,7 @@ To change the computer vision model, the engine and accelerator, and add additio
 ## Support
 [Documentation](https://alwaysai.co/docs/index.html)
 
-[Community Discord](https://discord.gg/rjDdRPT)
+[Community Discord](https://discord.gg/alwaysai)
 
 Email: support@alwaysai.co
+
