@@ -1,6 +1,6 @@
 {
   "models": {
-    "alwaysai/human_pose": 2
+    "alwaysai/human_pose": 3
   },
   "scripts": {
     "start": "python app.py"
